@@ -3,7 +3,7 @@
     <h2 class="nav-brand"><a href="#/home">Portfolio</a></h2>
     <ul class="nav-menu">
       <!-- ko foreach: menuItems -->
-      <li data-bind="css: { active: $parent.currentPath() === path }">
+      <li data-bind="css: { active: $parent.isActive(path) }">
         <a data-bind="
           text: label,
           attr: { href: '#/' + path },
