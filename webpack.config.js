@@ -18,6 +18,9 @@ module.exports = (env, argv) => {
         {
           test: /\.html$/i,
           loader: 'html-loader',
+          options: {
+            minimize: false,  // ← add this
+          },
         },
         {
           test: /\.css$/i,
