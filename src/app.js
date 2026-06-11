@@ -57,4 +57,4 @@ ko.components.register('nav-bar', {
 // Initialize and apply bindings
 initializeRouter();
 const app = new AppViewModel();
-ko.applyBindings(app);
+ko.applyBindings(app, document.getElementById('app'));
