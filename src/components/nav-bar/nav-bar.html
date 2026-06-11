@@ -3,11 +3,11 @@
     <h2 class="nav-brand"><a href="#/home">Portfolio</a></h2>
     <ul class="nav-menu">
       <!-- ko foreach: menuItems -->
-      <li data-bind="css: { active: $parent.isActive(path) }">
+      <li data-bind="css: { active: $parent.isActive($data.path) }">
         <a data-bind="
           text: label,
-          attr: { href: '#/' + path },
-          click: function() { $parent.navigate('/' + path); }
+          attr: { href: '#/' + $data.path },
+          click: function() { $parent.navigate('/' + $data.path); }
         "></a>
       </li>
       <!-- /ko -->
