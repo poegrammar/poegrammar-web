@@ -1,0 +1,250 @@
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Navigation Bar
+   ============================================ */
+.nav-bar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-brand a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.nav-menu li.active a {
+  color: #ffcc00;
+  font-weight: bold;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.25rem;
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  min-height: 60vh;
+}
+
+/* ============================================
+   Page Styles
+   ============================================ */
+.home-page,
+.about-page,
+.contact-page,
+.not-found-page {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Home Page */
+.home-page {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.home-page h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.home-page .tagline {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.home-page .bio {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* About Page */
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.about-page p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-page h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.about-page ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.about-page li {
+  background-color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+}
+
+/* Contact Page */
+.contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.contact-page p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-page a {
+  font-weight: bold;
+}
+
+/* 404 Page */
+.not-found-page {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.not-found-page h1 {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.not-found-page p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.not-found-page a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-page a:hover {
+  text-decoration: none;
+  background-color: #2980b9;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-page h1 {
+    font-size: 2rem;
+  }
+
+  .home-page .tagline {
+    font-size: 1rem;
+  }
+
+  .about-page ul {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin: 1rem auto;
+  }
+}
+
