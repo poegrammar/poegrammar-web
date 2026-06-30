@@ -1,6 +1,2 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* Main stylesheet - this is built from src/styles/main.css via webpack */
+@import url('../src/styles/main.css');
