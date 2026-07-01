@@ -18,3 +18,4 @@ build/
 # Environment
 .env
 .env.local
+poegrammar-web.code-workspace

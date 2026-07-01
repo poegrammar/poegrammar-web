@@ -4,6 +4,7 @@ import ko from 'knockout';
 const routes = [
   { path: 'home', component: 'home-page' },
   { path: 'about', component: 'about-page' },
+  { path: 'apps', component: 'apps-page' },
   { path: 'contact', component: 'contact-page' },
 ];
 

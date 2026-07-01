@@ -1,5 +1,7 @@
 <div class="home-page">
   <h1 data-bind="text: name"></h1>
-  <p class="tagline" data-bind="text: tagline"></p>
+  <!-- ko foreach: tagline -->
+  <p class="tagline" data-bind="text: $data"></p>
+  <!-- /ko -->
   <p class="bio" data-bind="text: bio"></p>
 </div>

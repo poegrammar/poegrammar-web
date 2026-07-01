@@ -1,0 +1,37 @@
+<div class="apps-page">
+  <h1 data-bind="text: title"></h1>
+  <p class="apps-intro" data-bind="text: intro"></p>
+
+  <div class="app-grid">
+    <!-- ko foreach: apps -->
+    <div class="app-card">
+      <h2 data-bind="text: name"></h2>
+      <p class="app-tagline" data-bind="text: tagline"></p>
+      <p class="app-description" data-bind="text: description"></p>
+
+      <ul class="app-stack">
+        <!-- ko foreach: stack -->
+        <li>
+          <span class="stack-label" data-bind="text: label"></span>
+          <span class="stack-value" data-bind="text: value"></span>
+        </li>
+        <!-- /ko -->
+      </ul>
+
+      <!-- ko if: url -->
+      <a class="app-launch-btn" data-bind="attr: { href: url }" target="_blank" rel="noopener noreferrer" aria-label="Launch app">
+        <svg class="car-icon" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5,29 C4,29 3,27 3,25 C3,22 6,18 10,16 C13,15 16,14.5 20,14.5 L36,14 C39,11 41,9 45,8 L60,8 C66,9 72,12 77,15 C80,17 82,18.5 84,19 C87,20.5 89,23 90,26 C90.5,27.5 89,29 87,29 L83,29 C83,26.5 81,24.5 77,24.5 C73,24.5 71,26.5 71,29 L29,29 C29,26.5 27,24.5 21,24.5 C15,24.5 13,26.5 13,29 L5,29 Z" />
+          <circle class="wheel" cx="21" cy="29" r="7" />
+          <circle class="wheel" cx="77" cy="29" r="7" />
+        </svg>
+        <span class="app-launch-label">Launch</span>
+      </a>
+      <!-- /ko -->
+      <!-- ko ifnot: url -->
+      <span class="app-current-badge">You're already here</span>
+      <!-- /ko -->
+    </div>
+    <!-- /ko -->
+  </div>
+</div>
