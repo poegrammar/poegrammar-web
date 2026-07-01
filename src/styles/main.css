@@ -81,6 +81,7 @@ body::after {
   mask-image: repeating-linear-gradient(to bottom, black 0px, black 6px, transparent 6px, transparent 14px);
   -webkit-mask-position: 0 55%;
   mask-position: 0 55%;
+  opacity: 0.35;
   pointer-events: none;
   z-index: 5;
 }
