@@ -25,10 +25,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  padding-top: max(0px, env(safe-area-inset-top));
-  padding-bottom: max(0px, env(safe-area-inset-bottom));
-  padding-left: max(0px, env(safe-area-inset-left));
-  padding-right: max(0px, env(safe-area-inset-right));
+  background-color: var(--deep);
 }
 
 body {
@@ -42,6 +39,10 @@ body {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Scanlines overlay */
