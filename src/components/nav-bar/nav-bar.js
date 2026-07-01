@@ -14,6 +14,7 @@ function NavBarViewModel() {
   this.menuItems = [
     new MenuItem('home', 'Home'),
     new MenuItem('about', 'About'),
+    new MenuItem('apps', 'Apps'),
     new MenuItem('contact', 'Contact'),
   ];
 }

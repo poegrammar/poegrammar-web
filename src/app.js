@@ -7,12 +7,14 @@ import './styles/main.css';
 // Import page ViewModels
 import { HomePageViewModel } from './pages/home/home';
 import { AboutPageViewModel } from './pages/about/about';
+import { AppsPageViewModel } from './pages/apps/apps';
 import { ContactPageViewModel } from './pages/contact/contact';
 import { NotFoundPageViewModel } from './pages/not-found/not-found';
 
 // Import page templates
 import homeTemplate from './pages/home/home.html';
 import aboutTemplate from './pages/about/about.html';
+import appsTemplate from './pages/apps/apps.html';
 import contactTemplate from './pages/contact/contact.html';
 import notFoundTemplate from './pages/not-found/not-found.html';
 
@@ -36,6 +38,11 @@ ko.components.register('home-page', {
 ko.components.register('about-page', {
   viewModel: AboutPageViewModel,
   template: aboutTemplate,
+});
+
+ko.components.register('apps-page', {
+  viewModel: AppsPageViewModel,
+  template: appsTemplate,
 });
 
 ko.components.register('contact-page', {

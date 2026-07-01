@@ -430,9 +430,10 @@ button:active, .btn:active {
 }
 
 .home-page .bio {
-  font-size: 1.1rem;
-  max-width: 600px;
+  font-size: 1.5rem;
+  max-width: 800px;
   margin: 0 auto;
+  padding-top: 5rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -451,6 +452,7 @@ button:active, .btn:active {
   margin-bottom: 1.5rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
 }
 
 .about-page ul {
@@ -474,6 +476,179 @@ button:active, .btn:active {
   transform: translateY(-5px);
 }
 
+/* Apps Page */
+.apps-page h1 {
+  margin-bottom: 1rem;
+}
+
+.apps-intro {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(61, 20, 102, 0.6);
+  border: 1px solid var(--cyan);
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.2), 0 0 20px rgba(0, 240, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.app-card:hover {
+  box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.3), 0 0 30px rgba(0, 240, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.app-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.app-tagline {
+  color: var(--pink);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 8px var(--pink);
+}
+
+.app-description {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.app-stack {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(0, 240, 255, 0.3);
+  padding-top: 0.75rem;
+}
+
+.app-stack li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed rgba(0, 240, 255, 0.15);
+}
+
+.app-stack li:last-child {
+  border-bottom: none;
+}
+
+.stack-label {
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cyan);
+  opacity: 0.8;
+}
+
+.stack-value {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: right;
+}
+
+/* Launch button styled as a sports car speeding toward the URL */
+.app-launch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--cyan);
+  background-color: transparent;
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.3), 0 0 10px rgba(0, 240, 255, 0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.app-launch-btn:hover {
+  border-color: var(--pink);
+  box-shadow: inset 0 0 20px rgba(255, 46, 136, 0.5), 0 0 20px rgba(255, 46, 136, 0.8);
+  text-decoration: none;
+}
+
+.app-launch-btn .car-icon {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+  fill: var(--cyan);
+  filter: drop-shadow(0 0 6px var(--cyan));
+  transition: transform 0.3s ease, fill 0.3s ease, filter 0.3s ease;
+}
+
+.app-launch-btn .car-icon .wheel {
+  fill: var(--deep);
+  stroke: var(--cyan);
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.app-launch-btn:hover .car-icon {
+  fill: var(--pink);
+  filter: drop-shadow(0 0 10px var(--pink));
+  transform: translateX(-6px);
+}
+
+.app-launch-btn:hover .car-icon .wheel {
+  stroke: var(--pink);
+}
+
+.app-launch-label {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: var(--cyan);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.app-launch-btn:hover .app-launch-label {
+  color: var(--pink);
+  text-shadow: 0 0 10px var(--pink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-launch-btn:hover .car-icon {
+    transform: none;
+  }
+}
+
+.app-current-badge {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: rgba(0, 240, 255, 0.6);
+  border: 2px dashed rgba(0, 240, 255, 0.3);
+}
+
 /* Contact Page */
 .contact-page h1 {
   margin-bottom: 1rem;
@@ -483,6 +658,7 @@ button:active, .btn:active {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
 }
 
 .contact-page a {
@@ -595,6 +771,10 @@ textarea::placeholder {
   }
 
   .about-page ul {
+    grid-template-columns: 1fr;
+  }
+
+  .app-grid {
     grid-template-columns: 1fr;
   }
 
