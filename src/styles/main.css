@@ -34,7 +34,6 @@ body {
   line-height: 1.6;
   color: #fff;
   background: linear-gradient(180deg, var(--deep) 0%, var(--mid) 45%, var(--pink) 78%, var(--orange) 100%);
-  background-attachment: fixed;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
