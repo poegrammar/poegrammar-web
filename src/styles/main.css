@@ -25,6 +25,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  padding-top: max(0px, env(safe-area-inset-top));
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
 }
 
 body {
@@ -37,6 +41,7 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Scanlines overlay */
@@ -135,6 +140,7 @@ h3 {
   backdrop-filter: blur(10px);
   color: white;
   padding: 0;
+  padding-top: max(0px, env(safe-area-inset-top));
   box-shadow: 0 0 30px rgba(255, 46, 136, 0.3);
   position: sticky;
   top: 0;
