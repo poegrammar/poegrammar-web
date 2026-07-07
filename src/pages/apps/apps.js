@@ -32,7 +32,7 @@ function AppsPageViewModel() {
       'Fitness Tracking Web App',
       'A workout tracker for logging sessions, exercises, sets/reps/weights, and visualizing progress over time — including quick-reference recent activity, per-exercise analytics charts, and days-since tracking.',
       [
-        { label: 'Client', value: 'React' },
+        { label: 'Client', value: 'ASP.NET Core MVC (Razor Views, C#)' },
         { label: 'Server', value: '.NET Core 10 Web API (C#)' },
         { label: 'Database', value: 'PostgreSQL' },
         { label: 'Hosting', value: 'Self-hosted (Docker, Nginx, ngrok on Ubuntu Server)' },
